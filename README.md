@@ -17,9 +17,11 @@ For quick reference, you may follow the steps below:
 
 <details>
   <summary>Quick but temporary solution:</summary>
+
   ```bash
   sudo ip link set lo multicast on
   ```
+
 </details>
 
 Proper solution:  
