@@ -15,10 +15,12 @@ For quick reference, you may follow the steps below:
 
 ### 1. Enable multicast for lo
 
-Quick but temporary solution:  
-```bash
-sudo ip link set lo multicast on
-```
+<details>
+  <summary>Quick but temporary solution:</summary>
+  ```bash
+  sudo ip link set lo multicast on
+  ```
+</details>
 
 Proper solution:  
 ```bash
@@ -57,15 +59,17 @@ sudo systemctl status multicast-lo.service
 
 ### 2. Enlarge Linux Kernel Max Buffer Size
 
-Quick but temporary solution:  
-```bash
-# Increase the maximum receive buffer size for network packets
-sudo sysctl -w net.core.rmem_max=2147483647  # 2 GiB, default is 208 KiB
+<details>
+  <summary>Quick but temporary solution:</summary>
+  ```bash
+  # Increase the maximum receive buffer size for network packets
+  sudo sysctl -w net.core.rmem_max=2147483647  # 2 GiB, default is 208 KiB
 
-# IP fragmentation settings
-sudo sysctl -w net.ipv4.ipfrag_time=3  # in seconds, default is 30 s
-sudo sysctl -w net.ipv4.ipfrag_high_thresh=134217728  # 128 MiB, default is 256 KiB
-```
+  # IP fragmentation settings
+  sudo sysctl -w net.ipv4.ipfrag_time=3  # in seconds, default is 30 s
+  sudo sysctl -w net.ipv4.ipfrag_high_thresh=134217728  # 128 MiB, default is 256 KiB
+  ```
+</details>
 
 Proper solution:  
 ```bash
