@@ -95,6 +95,10 @@ Validate:
 sysctl net.core.rmem_max net.ipv4.ipfrag_time net.ipv4.ipfrag_high_thresh
 ```
 
+Do note that if the values differs from our settings, just perform a reboot or
+run the temporary solution as the config files will kick into action only on
+the next boot.  
+
 ### 3. Configure CycloneDDS Profile  
 
 Note to select your network interface based on your need, if you only do
