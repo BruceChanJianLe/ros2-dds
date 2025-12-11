@@ -13,7 +13,7 @@ especially in challenging wireless/IoT environments.
 Below are some recommended settings by [Autoware](https://autowarefoundation.github.io/autoware-documentation/main/installation/additional-settings-for-developers/network-configuration/dds-settings/).
 For quick reference, you may follow the steps below:  
 
- 1. Enable multicast for lo
+### 1. Enable multicast for lo
 
 Quick but temporary solution:  
 ```bash
@@ -55,7 +55,7 @@ Validation:
 sudo systemctl status multicast-lo.service
 ```
 
- 2. Enlarge Linux Kernel Max Buffer Size
+### 2. Enlarge Linux Kernel Max Buffer Size
 
 Quick but temporary solution:  
 ```bash
@@ -87,7 +87,7 @@ Validate:
 sysctl net.core.rmem_max net.ipv4.ipfrag_time net.ipv4.ipfrag_high_thresh
 ```
 
- 3. Configure CycloneDDS Profile  
+### 3. Configure CycloneDDS Profile  
 
 Note to select your network interface based on your need, if you only do
 local testing, just uncomment the Interfaces tag:  
