@@ -101,6 +101,11 @@ the next boot.
 
 ### 3. Configure CycloneDDS Profile  
 
+Create cyclone dds profile at home directory:  
+```bash
+touch $HOME/cyclonedds.xml
+```
+
 Note to select your network interface based on your need, if you only do
 local testing, just uncomment the Interfaces tag:  
 ```xml
@@ -122,4 +127,10 @@ local testing, just uncomment the Interfaces tag:
     </Internal>
   </Domain>
 </CycloneDDS>
+```
+
+Finally, add this in your `.bashrc` and `.zshrc`.  
+```bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export CYCLONEDDS_URI=file://$HOME/cyclonedds.xml
 ```
